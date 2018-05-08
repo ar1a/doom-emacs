@@ -15,6 +15,7 @@ r: autoremove
 c: compile
 cc: compile-core
 ce: compile-elpa
+re: recompile
 
 ## Package management
 install: init.el .local/autoloads.el
