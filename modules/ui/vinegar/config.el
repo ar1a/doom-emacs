@@ -9,5 +9,6 @@
 
 (after! dired
   :config
-  (add-hook 'dired-mode-hook '+vinegar|dired-setup)
-  (map! :n "-" 'dired-jump))
+  (add-hook 'dired-mode-hook '+vinegar|dired-setup))
+
+(map! :n "-" 'dired-jump)
