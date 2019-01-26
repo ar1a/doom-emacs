@@ -6,6 +6,15 @@
 ;;
 ;; Common packages
 
+
+(def-package! hindent
+  :hook (haskell-mode . hindent-mode)
+  :config (setq hindent-reformat-buffer-on-save t)
+  (map! :map hindent-mode-map
+        :localleader
+        "=" #'hindent-reformat-buffer))
+
+
 (after! haskell-mode
   (setq haskell-process-suggest-remove-import-lines t  ; warnings for redundant imports etc
         haskell-process-auto-import-loaded-modules t)
